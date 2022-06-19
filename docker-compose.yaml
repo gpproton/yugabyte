@@ -1,0 +1,17 @@
+version: '3'
+services:
+  yugabyte:
+    container_name: yugabyte
+    image: gpproton/yugabyte-postgis:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - 9000:9000
+      - 7000:7000
+      - 5433:5433
+      - 9042:9042
+    volumes:
+      - ~/yugabyte-data:/home/yugabyte/yb_data
+    command: bin/yugabyted start --base_dir=/home/yugabyte/yb_data --daemon=false
