@@ -1,5 +1,5 @@
-FROM yugabytedb/yugabyte:2.13.2.0-b135
-LABEL version="2.13"
+FROM yugabytedb/yugabyte:2.15.1.0-b175
+LABEL version="2.15"
 LABEL maintaner="Godwin peter .O <me@godwin.dev>"
 LABEL release-date="2022-06-19"
 
